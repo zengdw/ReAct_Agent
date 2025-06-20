@@ -11,7 +11,7 @@ from agent.prompt import get_current_date, answer_instructions
 def llm_node(state: InputSchema, config: RunnableConfig):
     configurable = Configuration.from_runnable_config(config)
     llm = ChatOpenAI(
-        model="qwen-turbo-2025-04-28",
+        model="deepseek/deepseek-chat-v3-0324:free",
         api_key=os.getenv("OPENAI_API_KEY"),
         base_url=os.getenv("OPENAI_BASE_URL"),
     )
